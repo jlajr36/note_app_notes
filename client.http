@@ -1,0 +1,38 @@
+@base = http://127.0.0.1:5000
+
+### List All Notes
+GET {{base}}/api/notes
+Accept: application/json
+
+### Post request add new note
+POST {{base}}/api/notes
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "test note no num",
+    "content": "bla bla note no num",
+    "color": "color-purple"
+}
+
+### Put request update note
+PUT {{base}}/api/notes
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 1757035825,
+  "title": "test note new 2",
+  "content": "bla bla note new 2",
+  "color": "color-blue"
+}
+
+### Delete request remove note
+DELETE {{base}}/api/notes
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 1757035825
+
+}
